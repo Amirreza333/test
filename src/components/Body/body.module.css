@@ -1,0 +1,68 @@
+.container {
+  display: flex;
+  justify-content: center;
+  
+  height: 100%;
+
+  width: 100%;
+}
+
+.bodypicture {
+  height: 200px;
+  width: 200px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column
+  
+}
+
+.image {
+  height: 900px;
+  width: 900px;
+  border-radius: 20px;
+}
+.bodytext {
+  color: rgb(255, 187, 0);
+
+
+
+}
+.matn3{
+    color: rgb(0, 0, 0);
+height: 100px;
+width: 500px;
+}
+.matn1 {
+  color: black;
+}
+.matn2{
+    
+}
+
+.box{
+height: 100px;
+    width: 100%;
+ background-color: rgba(56, 253, 253, 0.267);
+direction: rtl;
+font-size: 140%;
+padding-top: 10px;
+
+}
+
+
+
+.boxtext1{
+    
+
+}
+
+
+
+
+
+
+
+
+
+
