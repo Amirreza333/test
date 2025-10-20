@@ -1,0 +1,14 @@
+@font-face {
+  font-family: yekan;
+  src: url(../../../Font/Yekan.ttf);
+}
+
+
+div{
+    font-family: yekan;
+}
+
+
+.buttonStyle{
+    font-family: yekan;
+}
