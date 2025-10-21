@@ -1,8 +1,14 @@
 import React, { useState } from "react";
 import { FaArrowCircleLeft } from "react-icons/fa";
-import style from "../Card/card.module.css"
+import style from "../Card/card.module.css";
+
 const CardSection = () => {
   const [hovered, setHovered] = useState(null);
+
+  // 🎯 اضافه کردن فونت yekan به‌صورت عمومی بدون تغییر در ساختار
+  const yekanFont = {
+    fontFamily: "yekan, sans-serif",
+  };
 
   const servicesData = [
     {
@@ -11,7 +17,7 @@ const CardSection = () => {
       description:
         "طراحی مدرن و کاربردی فضاهای داخلی با رعایت اصول ارگونومی و زیبایی‌شناسی.",
       image: "../../../public/Picture/طراحی داخل ساختمان.jpg",
-      fontfamily: "yekan"
+      fontFamily: "yekan",
     },
     {
       id: 2,
@@ -19,7 +25,7 @@ const CardSection = () => {
       description:
         "اجرای پروژه‌های ساختمانی با استفاده از مصالح باکیفیت و تیم متخصص.",
       image: "../../../public/Picture/ساخت و ساز 2.jpeg",
-      fontfamily: "yekan"
+      fontFamily: "yekan",
     },
     {
       id: 3,
@@ -27,7 +33,7 @@ const CardSection = () => {
       description:
         "ارائه مشاوره تخصصی و نظارت بر اجرای پروژه‌های ساختمانی.",
       image: "../../../public/Picture/مشاور ساختمان 1.jpg",
-      fontfamily: "yekan"
+      fontFamily: "yekan",
     },
   ];
 
@@ -37,6 +43,7 @@ const CardSection = () => {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
+    fontFamily: "yekan, sans-serif",
   };
 
   const containerStyle = {
@@ -46,6 +53,7 @@ const CardSection = () => {
     borderRadius: 16,
     padding: 20,
     boxShadow: "0 8px 24px rgba(0,0,0,0.1)",
+    fontFamily: "yekan, sans-serif",
   };
 
   const titleStyle = {
@@ -53,7 +61,7 @@ const CardSection = () => {
     fontSize: 22,
     fontWeight: 700,
     marginBottom: 20,
-    fontfamily: "yekan"
+    fontFamily: "yekan, sans-serif",
   };
 
   const listStyle = {
@@ -61,13 +69,14 @@ const CardSection = () => {
     flexWrap: "wrap",
     justifyContent: "center",
     gap: 16,
+    fontFamily: "yekan, sans-serif",
   };
 
   const cardBase = {
     backgroundColor: "#fff",
     borderRadius: 12,
     textAlign: "center",
-    padding: 0, // عکس بالا کل عرض کارت را می‌گیرد
+    padding: 0,
     minWidth: 220,
     maxWidth: 260,
     flex: "0 1 30%",
@@ -76,12 +85,12 @@ const CardSection = () => {
     cursor: "pointer",
     display: "flex",
     flexDirection: "column",
-    fontfamily: "yekan"
+    fontFamily: "yekan, sans-serif",
   };
 
   const imageWrapper = {
     width: "100%",
-    height: 140, // ارتفاع عکس در بالای کارت
+    height: 140,
     borderTopLeftRadius: 12,
     borderTopRightRadius: 12,
     overflow: "hidden",
@@ -90,7 +99,7 @@ const CardSection = () => {
   const imgStyle = {
     width: "100%",
     height: "100%",
-    objectFit: "cover", // عکس تمام عرض کارت را پر می‌کند
+    objectFit: "cover",
   };
 
   const contentWrapper = {
@@ -98,6 +107,7 @@ const CardSection = () => {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
+    fontFamily: "yekan, sans-serif",
   };
 
   const titleCardStyle = {
@@ -105,6 +115,7 @@ const CardSection = () => {
     fontWeight: 600,
     marginBottom: 6,
     textAlign: "center",
+    fontFamily: "yekan, sans-serif",
   };
 
   const descStyle = {
@@ -112,6 +123,7 @@ const CardSection = () => {
     color: "#555",
     lineHeight: 1.4,
     textAlign: "center",
+    fontFamily: "yekan, sans-serif",
   };
 
   const buttonWrapper = {
@@ -130,11 +142,11 @@ const CardSection = () => {
     borderRadius: 8,
     cursor: "pointer",
     transition: "background-color 0.5s ease",
-    fontfamily: "yekan"
+    fontFamily: "yekan, sans-serif",
   };
 
   return (
-    <section style={sectionStyle}>
+    <section style={{ ...sectionStyle, ...yekanFont }}>
       <div style={containerStyle}>
         <h1 style={titleStyle}>خدمات ساختمانی ما</h1>
         <div style={listStyle}>
@@ -159,6 +171,7 @@ const CardSection = () => {
                 <div style={imageWrapper}>
                   <img src={service.image} alt={service.title} style={imgStyle} />
                 </div>
+
                 {/* محتوای کارت */}
                 <div style={contentWrapper}>
                   <h3 style={titleCardStyle}>{service.title}</h3>
@@ -175,11 +188,9 @@ const CardSection = () => {
             style={buttonStyle}
             onMouseEnter={(e) => (e.target.style.backgroundColor = "#12295cff")}
             onMouseLeave={(e) => (e.target.style.backgroundColor = "#fcb53b")}
-            
           >
             <FaArrowCircleLeft />
-  مشاهده تمامی خدمات  
-  
+            مشاهده تمامی خدمات
           </button>
         </div>
       </div>
