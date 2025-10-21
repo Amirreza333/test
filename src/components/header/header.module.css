@@ -1,0 +1,189 @@
+/* ساختار کلی */
+.bu-header {
+  width: 100%;
+  position: fixed; /* ثابت در بالا */
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  font-family: "Vazir", sans-serif;
+  z-index: 1000;
+}
+
+/* مرکزچین کردن محتوا */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* نوار بالا */
+.bu-topbar {
+  background-color: #f8f9fa;
+  color: #444;
+  font-size: 14px;
+  border-bottom: 1px solid #eee;
+}
+
+.topbar-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 0;
+}
+
+.topbar-left span {
+  margin-left: 20px;
+}
+
+.topbar-right a {
+  margin-left: 10px;
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s ease;
+}
+.topbar-right a:hover {
+  color: #007bff;
+}
+
+/* هدر اصلی */
+.header-main {
+  background: #fff;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 0;
+  position: relative;
+}
+
+/* لوگو */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-icon {
+  width: 48px;
+  height: 48px;
+  background: linear-gradient(135deg, #4f46e5, #06b6d4);
+  color: white;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.logo h1 {
+  margin: 0;
+  font-size: 20px;
+  color: #111;
+}
+
+.logo p {
+  margin: 0;
+  font-size: 12px;
+  color: #666;
+}
+
+/* منوی ناوبری */
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #333;
+  font-size: 15px;
+  transition: color 0.3s ease;
+}
+
+.nav a:hover {
+  color: #007bff;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-primary {
+  background: #007bff;
+  color: #fff !important;
+  padding: 7px 12px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.btn-outline {
+  border: 1px solid #007bff;
+  color: #007bff !important;
+  padding: 6px 12px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 14px;
+  background: #fff;
+  transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+  background: #007bff;
+  color: #fff !important;
+}
+
+/* منوی موبایل */
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333;
+}
+
+/* واکنش‌گرا */
+@media (max-width: 992px) {
+  .nav {
+    display: none;
+    flex-direction: column;
+    background: #fff;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px 0;
+  }
+
+  .open {
+    display: flex;
+  }
+
+  .nav a {
+    padding: 10px 20px;
+  }
+
+  .nav-buttons {
+    flex-direction: column;
+    padding: 10px 20px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+/* فاصله برای جلوگیری از روی‌هم‌افتادن محتوا */
+body {
+  padding-top: 110px; /* برای اینکه محتوای صفحه زیر هدر نره */
+}
+
