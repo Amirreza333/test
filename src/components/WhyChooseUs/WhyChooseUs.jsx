@@ -40,6 +40,7 @@ const WhyChooseUs = () => {
   return (
     <section className={styles.section} aria-labelledby="why-choose-us-title">
       <div className={styles.container}>
+        <h3 className={styles.Hassan}>چرا ما را انتخاب کنید؟</h3>
         <h2 id="why-choose-us-title" className={styles.heading}>
           چرا ما بهترین انتخاب شما هستیم
         </h2>

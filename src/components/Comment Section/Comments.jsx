@@ -1,5 +1,7 @@
 import React from "react";
 import styles from "./comments.module.css";
+import { FaRegComments } from "react-icons/fa";
+import { style } from "framer-motion/client";
 
 export default function Testimonials() {
   const testimonials = [
@@ -9,7 +11,7 @@ export default function Testimonials() {
       quote:
         "همکاری با این تیم تجربه‌ای حرفه‌ای و لذت‌بخش بود. کیفیت کار و پشتیبانی عالی داشتند.",
       avatar: "../../../public/Picture/face pic.jpg",
-      rating: 5, // تعداد ستاره‌ها
+      rating: 5, 
     },
     {
       name: "س. نوری",
@@ -31,7 +33,11 @@ export default function Testimonials() {
 
   return (
     <section dir="rtl" className={styles.wrapper}>
-      <h2 className={styles.title}>آنچه مردم در مورد ما می‌گویند</h2>
+      <h3 className={styles.Hassan}><FaRegComments /> گواهینامه ها <FaRegComments /> </h3>
+      <h2 className={styles.title}> 
+   آنچه مردم در مورد ما می‌گویند  
+  
+</h2>
 
       <div className={styles.cards}>
         {testimonials.map((t, i) => (

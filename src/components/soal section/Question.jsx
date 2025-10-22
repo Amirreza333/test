@@ -30,7 +30,9 @@ export default function FAQ() {
 
   return (
     <section dir="rtl" className={styles.wrapper}>
-      <h3 className={styles.smallTitle}>سوالات متداول</h3>
+      <h3 className={styles.smallTitle}><BsFillQuestionDiamondFill />
+سوالات متداول<BsFillQuestionDiamondFill />
+</h3>
       <h2 className={styles.mainTitle}>سوالاتی دارید؟ ما پاسخ‌هایی داریم</h2>
 
       <div className={styles.accordion}>
@@ -40,8 +42,7 @@ export default function FAQ() {
               className={styles.question}
               onClick={() => toggleFAQ(index)}
             >
-              <LuMessageCircleQuestion />
-{faq.question}
+              {faq.question}
               <span className={styles.icon}>{openIndex === index ? "−" : "+"}</span>
             </button>
             {openIndex === index && (

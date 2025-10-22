@@ -110,12 +110,14 @@
   margin: 0;
 }
 
-
-.role{
+.role {
   font-family: yekan;
 }
 
-
-
-
-
+.Hassan {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #fcb53b;
+  margin-bottom: 8px;
+  text-align: center;
+}

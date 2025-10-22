@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./ProjectSection.module.css";
+import { FaSearch } from "react-icons/fa";
 
 const projects = [
   { id: 1, img: "/Picture/beatiful buildings (3).jpg", title: "پارک ویو پلازا", desc: "پروژه‌ای مدرن با طراحی شگفت‌انگیز و چشم‌انداز شهری بی‌نظیر. هر جزئیات آن با دقت برنامه‌ریزی شده است." },
@@ -12,6 +13,7 @@ const ProjectsSection = () => {
   return (
     <section className={styles.projectsSection}>
       <div className={styles.container}>
+        <h3 className={styles.Hassan}> پروژه های ما</h3>
         <h2 className={styles.heading}>
           طیف متنوعی از پروژه‌های ما را کاوش کنید
         </h2>

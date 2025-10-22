@@ -5,7 +5,6 @@ import style from "../Card/card.module.css";
 const CardSection = () => {
   const [hovered, setHovered] = useState(null);
 
-  // 🎯 اضافه کردن فونت yekan به‌صورت عمومی بدون تغییر در ساختار
   const yekanFont = {
     fontFamily: "yekan, sans-serif",
   };
@@ -148,6 +147,7 @@ const CardSection = () => {
   return (
     <section style={{ ...sectionStyle, ...yekanFont }}>
       <div style={containerStyle}>
+        
         <h1 style={titleStyle}>خدمات ساختمانی ما</h1>
         <div style={listStyle}>
           {servicesData.map((service) => {
