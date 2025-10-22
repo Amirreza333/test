@@ -1,6 +1,14 @@
+@font-face {
+  font-family: yekan;
+  src: url("../../../Font/Yekan.ttf");
+}
+
+div{font-family: yekan;}
 /* ---------- ساختار کلی ---------- */
 .bu-header {
   width: 100%;
+  margin: 0 10px;
+   width: calc(100% - 20px);
   position: fixed;
   top: 0;
   left: 0;
@@ -9,6 +17,7 @@
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
   font-family: "Vazir", sans-serif;
   z-index: 1000;
+  border-radius: 0 20px 20px 20px;
 }
 
 /* مرکزچین کردن محتوا */
@@ -51,7 +60,7 @@
 
 /* ---------- هدر اصلی ---------- */
 .header-main {
-  background: #1e5e9e49;
+  /* background: #1e5e9e49; */
 }
 
 .header-inner {
