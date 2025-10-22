@@ -28,7 +28,7 @@ const ProjectsSection = () => {
           ))}
         </div>
 
-        {/* دکمه زیر کارت‌ها */}
+        
         <div className={styles.buttonWrapper}>
           <button className={styles.viewMoreBtn}>مشاهده همه پروژه‌ها</button>
         </div>
@@ -36,5 +36,6 @@ const ProjectsSection = () => {
     </section>
   );
 };
+
 
 export default ProjectsSection;

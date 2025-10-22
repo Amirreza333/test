@@ -40,7 +40,7 @@
   box-shadow: 0 20px 40px rgba(16,24,40,0.15);
 }
 
-/* کارت عکس */
+
 .imgCard {
   flex-direction: column;
   height: 220px;
@@ -58,7 +58,7 @@
   transform: scale(1.05);
 }
 
-/* کارت متن + آیکن */
+
 .textCard {
   flex-direction: row;
   gap: 16px;
@@ -98,7 +98,7 @@
   font-size: 15px;
 }
 
-/* واکنش‌گرایی */
+
 @media (max-width: 992px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
@@ -127,7 +127,7 @@
     font-size: 14px;
   }
 }
-/* تعریف فونت یکان */
+
 @font-face {
   font-family: 'yekan';
   src: url('/fonts/Yekan.ttf') format('truetype');
@@ -135,17 +135,17 @@
   font-style: normal;
 }
 
-/* اعمال فونت روی کل پروژه */
+
 body, html {
   font-family: 'yekan', sans-serif;
 }
-/* متن داخل کارت‌ها */
+
 .cardTitle {
   margin: 0 0 8px;
   font-size: 18px;
   font-weight: 700;
   color: #0f172a;
-  font-family: 'yekan', sans-serif; /* اضافه شد */
+  font-family: 'yekan', sans-serif; 
 }
 
 .cardDesc {
@@ -153,6 +153,6 @@ body, html {
   color: #475569;
   line-height: 1.6;
   font-size: 15px;
-  font-family: 'yekan', sans-serif; /* اضافه شد */
+  font-family: 'yekan', sans-serif; 
 }
 

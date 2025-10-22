@@ -1,0 +1,121 @@
+.wrapper {
+  background-color: #f9fafb;
+  padding: 80px 20px;
+  text-align: center;
+  font-family: yekan;
+}
+
+.title {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 40px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+@media (max-width: 900px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  padding: 28px 22px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid #e2e8f0;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
+}
+
+.stars {
+  font-size: 1.2rem;
+  color: #fbbf24;
+  margin-bottom: 15px;
+  text-align: right;
+}
+
+.star {
+  margin: 0 2px;
+}
+
+.quote {
+  color: #334155;
+  font-size: 1rem;
+  line-height: 1.9;
+  margin-bottom: 28px;
+  text-align: right;
+  position: relative;
+}
+
+.quote::before {
+  content: "“";
+  color: #6366f1;
+  font-size: 2.5rem;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  opacity: 0.2;
+}
+
+.footer {
+  border-top: 1px solid #e2e8f0;
+  padding-top: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  text-align: right;
+}
+
+.avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #e2e8f0;
+}
+
+.person {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #0f172a;
+  margin: 0;
+}
+
+.role {
+  font-size: 0.85rem;
+  color: #64748b;
+  margin: 0;
+}
+
+
+.role{
+  font-family: yekan;
+}
+
+
+
+
+
