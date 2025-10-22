@@ -29,8 +29,7 @@ const CardSection = () => {
     {
       id: 3,
       title: "مشاوره و نظارت",
-      description:
-        "ارائه مشاوره تخصصی و نظارت بر اجرای پروژه‌های ساختمانی.",
+      description: "ارائه مشاوره تخصصی و نظارت بر اجرای پروژه‌های ساختمانی.",
       image: "../../../public/Picture/مشاور ساختمان 1.jpg",
       fontFamily: "yekan",
     },
@@ -142,12 +141,14 @@ const CardSection = () => {
     cursor: "pointer",
     transition: "background-color 0.5s ease",
     fontFamily: "yekan, sans-serif",
+    display: "flex",
+    justifyContent: "center",
+    alignItems:"center"
   };
 
   return (
     <section style={{ ...sectionStyle, ...yekanFont }}>
       <div style={containerStyle}>
-        
         <h1 style={titleStyle}>خدمات ساختمانی ما</h1>
         <div style={listStyle}>
           {servicesData.map((service) => {
@@ -169,13 +170,19 @@ const CardSection = () => {
               >
                 {/* عکس بالای کارت */}
                 <div style={imageWrapper}>
-                  <img src={service.image} alt={service.title} style={imgStyle} />
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    style={imgStyle}
+                  />
                 </div>
 
                 {/* محتوای کارت */}
                 <div style={contentWrapper}>
                   <h3 style={titleCardStyle}>{service.title}</h3>
-                  <p style={descStyle}>{service.description}</p>
+                  <p dir="rtl" style={descStyle}>
+                    {service.description}
+                  </p>
                 </div>
               </div>
             );
@@ -190,7 +197,7 @@ const CardSection = () => {
             onMouseLeave={(e) => (e.target.style.backgroundColor = "#fcb53b")}
           >
             <FaArrowCircleLeft />
-            مشاهده تمامی خدمات
+            <span style={{marginLeft:"8px"}}>مشاهده خدمات بیشتر</span>
           </button>
         </div>
       </div>

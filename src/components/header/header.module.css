@@ -16,11 +16,13 @@ div {
   left: 0;
   right: 0;
   background: #0738697d;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 6px rgba(214, 28, 28, 0.08);
   font-family: "Vazir", sans-serif;
   z-index: 1000;
-  border-radius: 20px;
+  border-radius: 10px;
   flex-wrap: wrap;
+  backdrop-filter: blur(15px);
+  
 }
 
 /* مرکزچین کردن محتوا */
@@ -36,8 +38,8 @@ div {
   color: #fff;
   font-size: 14px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 20px 20px 0 0;
-  padding: 10px;
+  border-radius: 10px 10px 0 0;
+  padding: 25px;
   flex-wrap: wrap;
 }
 

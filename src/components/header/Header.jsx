@@ -15,12 +15,12 @@ export default function Header() {
               <span>📞 ۰۲۱-۱۲۳۴۵۶۷</span>
               <span>✉️ info@example.com</span>
             </div>
-            <div className={Style["topbar-right"]}>
+            {/* <div className={Style["topbar-right"]}>
               <a href="#">ورود</a>
               <a href="#" className={Style["btn-primary"]}>
                 ثبت سفارش
               </a>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
