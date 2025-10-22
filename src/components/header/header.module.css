@@ -3,12 +3,12 @@
   src: url("../../../Font/Yekan.ttf");
 }
 
-div{font-family: yekan;}
+div { font-family: yekan; }
+
 /* ---------- ساختار کلی ---------- */
 .bu-header {
-  width: 100%;
+  width: calc(100% - 20px);
   margin: 0 10px;
-   width: calc(100% - 20px);
   position: fixed;
   top: 0;
   left: 0;
@@ -59,19 +59,17 @@ div{font-family: yekan;}
 }
 
 /* ---------- هدر اصلی ---------- */
-.header-main {
-  /* background: #1e5e9e49; */
-}
+.header-main {}
 
 .header-inner {
   display: flex;
   align-items: center;
-  justify-content: center; /* مرکزچین کردن کلی */
-  padding: 14px 30px; /* فاصله از دو طرف */
+  justify-content: center; /* فهرست وسط */
+  padding: 14px 30px;
   position: relative;
 }
 
-/* لوگو سمت چپ */
+/* لوگو دسکتاپ سمت چپ */
 .logo {
   display: flex;
   align-items: center;
@@ -82,25 +80,6 @@ div{font-family: yekan;}
   transform: translateY(-50%);
 }
 
-/* فهرست وسط */
-.nav {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 25px;
-}
-
-/* دکمه‌ها سمت راست */
-.nav-buttons {
-  display: flex;
-  gap: 10px;
-  position: absolute;
-  right: 30px;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-/* ---------- لوگو ---------- */
 .logo-icon {
   width: 60px;
   height: 60px;
@@ -121,7 +100,14 @@ div{font-family: yekan;}
   color: #fff;
 }
 
-/* ---------- لینک‌ها ---------- */
+/* فهرست وسط */
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+}
+
 .nav a {
   text-decoration: none;
   color: #fff;
@@ -133,7 +119,16 @@ div{font-family: yekan;}
   color: #f5b207;
 }
 
-/* ---------- دکمه‌ها ---------- */
+/* دکمه‌ها سمت راست */
+.nav-buttons {
+  display: flex;
+  gap: 10px;
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 .btn-primary {
   background: #f5b207;
   color: #ffffff !important;
@@ -146,7 +141,7 @@ div{font-family: yekan;}
 }
 
 .btn-primary:hover {
-  background: #ffd54f;
+  background: linear-gradient(to right, #ffd54f, #f5b207);
   color: #073869 !important;
 }
 
@@ -167,7 +162,7 @@ div{font-family: yekan;}
   color: #073869 !important;
 }
 
-/* ---------- منوی موبایل ---------- */
+/* ---------- منوی همبرگری ---------- */
 .menu-toggle {
   display: none;
   font-size: 28px;
@@ -176,9 +171,6 @@ div{font-family: yekan;}
   cursor: pointer;
   color: #fff;
   transition: color 0.3s ease;
-  position: fixed;
-  left: 20px; /* منوی همبرگری سمت چپ */
-  top: 20px;
   z-index: 1100;
 }
 
@@ -188,36 +180,53 @@ div{font-family: yekan;}
 
 /* ---------- واکنش‌گرا ---------- */
 @media (max-width: 992px) {
+
   .bu-header {
-    left: 0;
-    right: 0;
-    width: 100%;
-    border-radius: 0;
+    width: calc(100% - 20px);
+    margin: 10px;
+    border-radius: 12px;
   }
 
+  /* لوگو موبایل راست */
+  .logo {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  /* همبرگری چپ */
+  .menu-toggle {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block;
+  }
+
+  /* منوی موبایل */
   .nav {
     display: none;
     flex-direction: column;
     background: #073869;
     position: fixed;
-    top: 0;
-    left: 0; /* باز شدن از سمت چپ */
-    width: 250px;
-    height: 100vh;
-    padding-top: 80px;
-    box-shadow: 2px 0 8px rgba(0,0,0,0.3);
+    top: 60px; /* درست زیر هدر */
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
     transition: transform 0.3s ease;
-    transform: translateX(-100%);
+    transform: translateY(-100%);
     z-index: 1050;
   }
 
   .open {
-    transform: translateX(0);
+    transform: translateY(0);
     display: flex;
   }
 
   .nav a {
-    padding: 15px 20px;
+    padding: 10px 20px;
     color: #fff;
   }
 
@@ -225,24 +234,13 @@ div{font-family: yekan;}
     color: #f5b207;
   }
 
+  /* دکمه‌ها زیر فهرست موبایل و داخل هدر */
   .nav-buttons {
     flex-direction: column;
     padding: 10px 20px;
     position: static;
     transform: none;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
-
-  /* لوگو وسط چین می‌شود */
-  .logo {
-    position: static;
-    transform: none;
-    justify-content: center;
-    width: 100%;
-    margin-bottom: 10px;
+    margin-top: 10px;
   }
 }
 
