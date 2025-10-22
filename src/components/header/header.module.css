@@ -3,12 +3,12 @@
   src: url("../../../Font/Yekan.ttf");
 }
 
-div { font-family: yekan; }
-
+div{font-family: yekan;}
 /* ---------- ساختار کلی ---------- */
 .bu-header {
-  width: calc(100% - 20px);
+  width: 100%;
   margin: 0 10px;
+   width: calc(100% - 20px);
   position: fixed;
   top: 0;
   left: 0;
@@ -17,7 +17,8 @@ div { font-family: yekan; }
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
   font-family: "Vazir", sans-serif;
   z-index: 1000;
-  border-radius: 0 20px 20px 20px;
+  border-radius: 20px;
+  flex-wrap: wrap;
 }
 
 /* مرکزچین کردن محتوا */
@@ -32,7 +33,10 @@ div { font-family: yekan; }
   background-color: #073869;
   color: #fff;
   font-size: 14px;
-  border-bottom: 1px solid rgba(255,255,255,0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px 20px 0 0;
+  padding: 10px;
+  flex-wrap: wrap;
 }
 
 .topbar-inner {
@@ -96,7 +100,8 @@ div { font-family: yekan; }
   object-fit: contain;
 }
 
-.logo h1, .logo p {
+.logo h1,
+.logo p {
   color: #fff;
 }
 
@@ -182,39 +187,23 @@ div { font-family: yekan; }
 @media (max-width: 992px) {
 
   .bu-header {
-    width: calc(100% - 20px);
-    margin: 10px;
-    border-radius: 12px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    border-radius: 0;
   }
 
-  /* لوگو موبایل راست */
-  .logo {
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-
-  /* همبرگری چپ */
-  .menu-toggle {
-    position: absolute;
-    left: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-    display: block;
-  }
-
-  /* منوی موبایل */
   .nav {
     display: none;
     flex-direction: column;
     background: #073869;
     position: fixed;
-    top: 60px; /* درست زیر هدر */
-    left: 0;
-    width: 100%;
-    padding: 10px 0;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    top: 0;
+    left: 0; /* باز شدن از سمت چپ */
+    width: 250px;
+    height: 100vh;
+    padding-top: 80px;
+    box-shadow: 2px 0 8px rgba(0,0,0,0.3);
     transition: transform 0.3s ease;
     transform: translateY(-100%);
     z-index: 1050;
