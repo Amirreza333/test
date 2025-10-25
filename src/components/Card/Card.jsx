@@ -29,8 +29,7 @@ const CardSection = () => {
     {
       id: 3,
       title: "مشاوره و نظارت",
-      description:
-        "ارائه مشاوره تخصصی و نظارت بر اجرای پروژه‌های ساختمانی.",
+      description: "ارائه مشاوره تخصصی و نظارت بر اجرای پروژه‌های ساختمانی.",
       image: "../../../public/Picture/مشاور ساختمان 1.jpg",
       fontFamily: "yekan",
     },
@@ -132,6 +131,7 @@ const CardSection = () => {
   };
 
   const buttonStyle = {
+    height:"40px",
     padding: "10px 20px",
     fontSize: 14,
     fontWeight: 600,
@@ -142,12 +142,14 @@ const CardSection = () => {
     cursor: "pointer",
     transition: "background-color 0.5s ease",
     fontFamily: "yekan, sans-serif",
+    display: "flex",
+    justifyContent: "center",
+    alignItems:"center"
   };
 
   return (
     <section style={{ ...sectionStyle, ...yekanFont }}>
       <div style={containerStyle}>
-        
         <h1 style={titleStyle}>خدمات ساختمانی ما</h1>
         <div style={listStyle}>
           {servicesData.map((service) => {
@@ -169,28 +171,35 @@ const CardSection = () => {
               >
                 
                 <div style={imageWrapper}>
-                  <img src={service.image} alt={service.title} style={imgStyle} />
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    style={imgStyle}
+                  />
                 </div>
 
                 
                 <div style={contentWrapper}>
                   <h3 style={titleCardStyle}>{service.title}</h3>
-                  <p style={descStyle}>{service.description}</p>
+                  <p dir="rtl" style={descStyle}>
+                    {service.description}
+                  </p>
                 </div>
               </div>
             );
           })}
         </div>
 
-        {/* دکمه وسط‌چین */}
+        
         <div style={buttonWrapper}>
           <button
             style={buttonStyle}
+          
             onMouseEnter={(e) => (e.target.style.backgroundColor = "#12295cff")}
             onMouseLeave={(e) => (e.target.style.backgroundColor = "#fcb53b")}
           >
             <FaArrowCircleLeft />
-            مشاهده تمامی خدمات
+            <h3 style={{marginLeft:"6px",}}>مشاهده خدمات بیشتر</h3>
           </button>
         </div>
       </div>

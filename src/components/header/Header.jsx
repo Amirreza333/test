@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import Style from "../header/header.module.css";
+import Style from "./Header.module.css";
+import Imgo from "../../../public/Picture/FZPR3073.PNG";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -8,41 +9,34 @@ export default function Header() {
     <header className={Style["bu-header"]} dir="rtl">
       {/* Top Bar */}
       <div className={Style["bu-topbar"]}>
-        <div className={Style["container"]}>
+        <div className={Style.container}>
           <div className={Style["topbar-inner"]}>
             <div className={Style["topbar-left"]}>
-              <span>📞 ۰۲۱-۱۲۳۴۵۶۷</span>
+              <span> ۰۲۱-۱۲۳۴۵۶۷</span>
               <span>✉️ info@example.com</span>
             </div>
-            <div className={Style["topbar-right"]}>
+            {/* <div className={Style["topbar-right"]}>
               <a href="#">ورود</a>
               <a href="#" className={Style["btn-primary"]}>
                 ثبت سفارش
               </a>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
 
       {/* Main Header */}
       <div className={Style["header-main"]}>
-        <div className={Style["container"]}>
+        <div className={Style.container}>
           <div className={Style["header-inner"]}>
             {/* Logo */}
             <div className={Style.logo}>
-              <div className={Style.logo}>
-                <div className={Style["logo-icon"]}>
-                  <img src="/FZPR3073.PNG" alt="لوگو سایت" />
-                </div>
-                <div>
-                  <h1>BuiltUp</h1>
-                  <p>قالب شرکتی حرفه‌ای</p>
-                </div>
-              </div>
-
               <div>
-                <h1>BuiltUp</h1>
-                <p>قالب شرکتی حرفه‌ای</p>
+                {" "}
+                <h1>dena sun</h1>
+              </div>
+              <div className={Style["logo-icon"]}>
+                <img src={Imgo} alt="logo" width={48} height={48} />
               </div>
             </div>
 
@@ -54,9 +48,6 @@ export default function Header() {
               <a href="#about">درباره ما</a>
               <a href="#contact">تماس</a>
               <div className={Style["nav-buttons"]}>
-                <a href="#" className={Style["btn-outline"]}>
-                  دمو
-                </a>
                 <a href="#" className={Style["btn-primary"]}>
                   خرید
                 </a>
