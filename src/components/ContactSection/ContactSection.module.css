@@ -1,6 +1,5 @@
-/* contact.module.css */
-
-.e-con-inner {
+/* Contact.module.css */
+.eConInner {
   width: 100%;
   padding: 50px 0;
   display: flex;
@@ -8,75 +7,63 @@
   background-color: #f9f9f9;
 }
 
-.e-con {
+.eCon {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
 }
 
-.contact-sidebar {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  width: 100%;
-  max-width: 400px;
-}
-
-.contact-info {
+.contactInfo {
   background-color: #fff;
   border-radius: 15px;
   padding: 25px;
   text-align: center;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
+  flex: 1 1 300px;
 }
 
-.contact-info:hover {
+.contactInfo:hover {
   transform: translateY(-5px);
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
 }
 
-.elementskit-infobox {
+.elementskitInfobox {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.elementskit-info-box-icon {
+.elementskitInfoBoxIcon {
   margin-bottom: 15px;
 }
 
-.elementskit-info-box-icon svg {
-  width: 70px;
-  height: 70px;
-}
-
-.box-body {
+.boxBody {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.elementskit-info-box-title {
+.elementskitInfoBoxTitle {
   font-size: 1.4rem;
   font-weight: 700;
   margin-bottom: 10px;
   color: #222;
 }
 
-.box-body p {
+.boxBody p {
   font-size: 1rem;
   color: #555;
   margin: 0;
 }
 
-.box-body p a {
-  color: #c69c6d; /* رنگ طلایی */
+.boxBody p a {
+  color: #C69C6D;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
-.box-body p a:hover {
+.boxBody p a:hover {
   color: #b38c5a;
 }
 
@@ -98,12 +85,5 @@
   to {
     opacity: 1;
     transform: translate3d(0, 0, 0);
-  }
-}
-
-/* ریسپانسیو */
-@media (max-width: 768px) {
-  .contact-sidebar {
-    max-width: 100%;
   }
 }
