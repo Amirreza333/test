@@ -20,8 +20,8 @@ function App() {
       <Card2 />
       <Comments />
       <Question />
-      <Contact />
       <Question />
+      <Contact />
       <Footer />
     </div>
   );
