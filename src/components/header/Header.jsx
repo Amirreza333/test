@@ -12,7 +12,7 @@ export default function Header() {
         <div className={Style.container}>
           <div className={Style["topbar-inner"]}>
             <div className={Style["topbar-left"]}>
-              <span>📞 ۰۲۱-۱۲۳۴۵۶۷</span>
+              <span> ۰۲۱-۱۲۳۴۵۶۷</span>
               <span>✉️ info@example.com</span>
             </div>
             {/* <div className={Style["topbar-right"]}>
