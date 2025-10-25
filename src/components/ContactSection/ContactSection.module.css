@@ -1,60 +1,109 @@
-.eConInner {
+/* contact.module.css */
+
+.e-con-inner {
+  width: 100%;
+  padding: 50px 0;
+  display: flex;
+  justify-content: center;
+  background-color: #f9f9f9;
+}
+
+.e-con {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 20px;
 }
 
-.sidebar {
-  flex: 1;
+.contact-sidebar {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-}
-
-.contactBox {
-  background: #fff;
-  padding: 1rem;
-  text-align: center;
-  border-radius: 8px;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-}
-
-.icon {
-  margin-bottom: 0.5rem;
-}
-
-.boxBody h3 {
-  margin: 0.5rem 0;
-}
-
-.imageBox img {
+  gap: 20px;
   width: 100%;
-  max-width: 300px;
-  border-radius: 8px;
+  max-width: 400px;
 }
 
-.formSection {
-  flex: 1;
+.contact-info {
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 }
 
-.contactForm {
+.contact-info:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.elementskit-infobox {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  align-items: center;
 }
 
-.contactForm input,
-.contactForm textarea {
-  padding: 0.5rem;
-  border-radius: 6px;
-  border: 1px solid #ccc;
+.elementskit-info-box-icon {
+  margin-bottom: 15px;
 }
 
-.contactForm button {
-  background: #ffb703;
-  color: #fff;
-  padding: 0.5rem;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
+.elementskit-info-box-icon svg {
+  width: 70px;
+  height: 70px;
+}
+
+.box-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.elementskit-info-box-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.box-body p {
+  font-size: 1rem;
+  color: #555;
+  margin: 0;
+}
+
+.box-body p a {
+  color: #c69c6d; /* رنگ طلایی */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.box-body p a:hover {
+  color: #b38c5a;
+}
+
+/* انیمیشن fadeInUp */
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.fadeInUp {
+  animation-name: fadeInUp;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 40px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* ریسپانسیو */
+@media (max-width: 768px) {
+  .contact-sidebar {
+    max-width: 100%;
+  }
 }
