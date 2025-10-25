@@ -1,14 +1,9 @@
 import React, { useState } from "react";
 import { FaArrowCircleLeft } from "react-icons/fa";
-import style from "../Card/card.module.css";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
-
-
-
-
-const CardSection = () => {
+const Card = () => {
   const [hovered, setHovered] = useState(null);
 
   const yekanFont = {
@@ -21,23 +16,20 @@ const CardSection = () => {
       title: "طراحی داخلی",
       description:
         "طراحی مدرن و کاربردی فضاهای داخلی با رعایت اصول ارگونومی و زیبایی‌شناسی.",
-      image: "../../../public/Picture/طراحی داخل ساختمان.jpg",
-      fontFamily: "yekan",
+      image: "/Picture/طراحی داخل ساختمان.jpg",
     },
     {
       id: 2,
       title: "ساخت و ساز",
       description:
         "اجرای پروژه‌های ساختمانی با استفاده از مصالح باکیفیت و تیم متخصص.",
-      image: "../../../public/Picture/ساخت و ساز 2.jpeg",
-      fontFamily: "yekan",
+      image: "/Picture/ساخت و ساز 2.jpeg",
     },
     {
       id: 3,
       title: "مشاوره و نظارت",
       description: "ارائه مشاوره تخصصی و نظارت بر اجرای پروژه‌های ساختمانی.",
-      image: "../../../public/Picture/مشاور ساختمان 1.jpg",
-      fontFamily: "yekan",
+      image: "/Picture/مشاور ساختمان 1.jpg",
     },
   ];
 
@@ -55,9 +47,8 @@ const CardSection = () => {
     width: "100%",
     backgroundColor: "rgba(233, 247, 254)",
     borderRadius: 12,
-    padding: "20px 10px ",
+    padding: "20px 10px",
     boxShadow: "0 8px 24px rgba(0,0,0,0.1)",
-    fontFamily: "yekan, sans-serif",
   };
 
   const titleStyle = {
@@ -65,7 +56,6 @@ const CardSection = () => {
     fontSize: 22,
     fontWeight: 700,
     marginBottom: 20,
-    fontFamily: "yekan, sans-serif",
   };
 
   const listStyle = {
@@ -73,7 +63,6 @@ const CardSection = () => {
     flexWrap: "wrap",
     justifyContent: "center",
     gap: 16,
-    fontFamily: "yekan, sans-serif",
   };
 
   const cardBase = {
@@ -89,7 +78,6 @@ const CardSection = () => {
     cursor: "pointer",
     display: "flex",
     flexDirection: "column",
-    fontFamily: "yekan, sans-serif",
   };
 
   const imageWrapper = {
@@ -111,7 +99,6 @@ const CardSection = () => {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    fontFamily: "yekan, sans-serif",
   };
 
   const titleCardStyle = {
@@ -119,7 +106,6 @@ const CardSection = () => {
     fontWeight: 600,
     marginBottom: 6,
     textAlign: "center",
-    fontFamily: "yekan, sans-serif",
   };
 
   const descStyle = {
@@ -127,7 +113,6 @@ const CardSection = () => {
     color: "#555",
     lineHeight: 1.4,
     textAlign: "center",
-    fontFamily: "yekan, sans-serif",
   };
 
   const buttonWrapper = {
@@ -137,7 +122,7 @@ const CardSection = () => {
   };
 
   const buttonStyle = {
-    height:"40px",
+    height: "40px",
     padding: "10px 20px",
     fontSize: 14,
     fontWeight: 600,
@@ -146,11 +131,11 @@ const CardSection = () => {
     border: "none",
     borderRadius: 8,
     cursor: "pointer",
-    transition: "background-color 0.5s ease",
-    fontFamily: "yekan, sans-serif",
+    textDecoration: "none",
     display: "flex",
     justifyContent: "center",
-    alignItems:"center"
+    alignItems: "center",
+    transition: "background-color 0.3s ease",
   };
 
   return (
@@ -169,49 +154,41 @@ const CardSection = () => {
             };
 
             return (
-              <link 
-              to={'/src/components/page/Service.jsx'}
+              <Link
                 key={service.id}
-                style={cardStyle}
+                to="/ServiceConstruction"
+                style={{ textDecoration: "none", color: "inherit", display: "block" }}
                 onMouseEnter={() => setHovered(service.id)}
                 onMouseLeave={() => setHovered(null)}
               >
-                
-                <div style={imageWrapper}>
-                  <img
-                    src={service.image}
-                    alt={service.title}
-                    style={imgStyle}
-                  />
+                <div style={cardStyle}>
+                  <div style={imageWrapper}>
+                    <img src={service.image} alt={service.title} style={imgStyle} />
+                  </div>
+                  <div style={contentWrapper}>
+                    <h3 style={titleCardStyle}>{service.title}</h3>
+                    <p dir="rtl" style={descStyle}>{service.description}</p>
+                  </div>
                 </div>
-
-                
-                <div style={contentWrapper}>
-                  <h3 style={titleCardStyle}>{service.title}</h3>
-                  <p dir="rtl" style={descStyle}>
-                    {service.description}
-                  </p>
-                </div>
-              </link>
+              </Link>
             );
           })}
         </div>
 
-        
         <div style={buttonWrapper}>
-          <button
+          <Link
+            to="/ServiceConstruction"
             style={buttonStyle}
-          
-            onMouseEnter={(e) => (e.target.style.backgroundColor = "#12295cff")}
+            onMouseEnter={(e) => (e.target.style.backgroundColor = "#12295c")}
             onMouseLeave={(e) => (e.target.style.backgroundColor = "#fcb53b")}
           >
-            <FaArrowCircleLeft />
-            <h3 style={{marginLeft:"6px",}}>مشاهده خدمات بیشتر</h3>
-          </button>
+            <FaArrowCircleLeft style={{ marginRight: "6px" }} />
+            مشاهده خدمات بیشتر
+          </Link>
         </div>
       </div>
     </section>
   );
 };
 
-export default CardSection;
+export default Card;
