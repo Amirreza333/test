@@ -46,11 +46,11 @@ const CardSection = () => {
   };
 
   const containerStyle = {
-    maxWidth: 1100,
+    maxWidth: 1140,
     width: "100%",
     backgroundColor: "rgba(233, 247, 254)",
-    borderRadius: 16,
-    padding: 20,
+    borderRadius: 12,
+    padding: "20px 10px ",
     boxShadow: "0 8px 24px rgba(0,0,0,0.1)",
     fontFamily: "yekan, sans-serif",
   };
@@ -77,7 +77,7 @@ const CardSection = () => {
     textAlign: "center",
     padding: 0,
     minWidth: 220,
-    maxWidth: 260,
+    maxWidth: 360,
     flex: "0 1 30%",
     boxShadow: "0 4px 12px rgba(0,0,0,0.1)",
     transition: "transform 0.25s ease, boxShadow 0.25s ease",
@@ -167,12 +167,12 @@ const CardSection = () => {
                 onMouseEnter={() => setHovered(service.id)}
                 onMouseLeave={() => setHovered(null)}
               >
-                {/* عکس بالای کارت */}
+                
                 <div style={imageWrapper}>
                   <img src={service.image} alt={service.title} style={imgStyle} />
                 </div>
 
-                {/* محتوای کارت */}
+                
                 <div style={contentWrapper}>
                   <h3 style={titleCardStyle}>{service.title}</h3>
                   <p style={descStyle}>{service.description}</p>
