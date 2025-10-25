@@ -3,18 +3,6 @@ import Style from "./Footer.module.css"; // اینجا دقت کن 👈
 import Imgo from "../../../public/Picture/FZPR3073.PNG";
 
 export default function Footer() {
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (!email.includes("@")) {
-      setMessage("لطفاً ایمیل معتبر وارد کنید.");
-      return;
-    }
-    setMessage("با موفقیت عضو خبرنامه شدید!");
-    setEmail("");
-  };
 
   return (
     <footer className={Style.footer} dir="rtl">
