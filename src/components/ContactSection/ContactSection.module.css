@@ -1,89 +1,60 @@
-/* Contact.module.css */
 .eConInner {
-  width: 100%;
-  padding: 50px 0;
-  display: flex;
-  justify-content: center;
-  background-color: #f9f9f9;
-}
-
-.eCon {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 2rem;
 }
 
-.contactInfo {
-  background-color: #fff;
-  border-radius: 15px;
-  padding: 25px;
+.sidebar {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contactBox {
+  background: #fff;
+  padding: 1rem;
   text-align: center;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
-  flex: 1 1 300px;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
 }
 
-.contactInfo:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+.icon {
+  margin-bottom: 0.5rem;
 }
 
-.elementskitInfobox {
+.boxBody h3 {
+  margin: 0.5rem 0;
+}
+
+.imageBox img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 8px;
+}
+
+.formSection {
+  flex: 1;
+}
+
+.contactForm {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  gap: 0.75rem;
 }
 
-.elementskitInfoBoxIcon {
-  margin-bottom: 15px;
+.contactForm input,
+.contactForm textarea {
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
 }
 
-.boxBody {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.elementskitInfoBoxTitle {
-  font-size: 1.4rem;
-  font-weight: 700;
-  margin-bottom: 10px;
-  color: #222;
-}
-
-.boxBody p {
-  font-size: 1rem;
-  color: #555;
-  margin: 0;
-}
-
-.boxBody p a {
-  color: #C69C6D;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.boxBody p a:hover {
-  color: #b38c5a;
-}
-
-/* انیمیشن fadeInUp */
-.animated {
-  animation-duration: 1s;
-  animation-fill-mode: both;
-}
-
-.fadeInUp {
-  animation-name: fadeInUp;
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translate3d(0, 40px, 0);
-  }
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
+.contactForm button {
+  background: #ffb703;
+  color: #fff;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
 }
