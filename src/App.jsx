@@ -7,6 +7,10 @@ import Card2 from "./components/Card with picture/Card2";
 import Comments from "./components/Comment Section/Comments";
 import Question from "./components/soal section/Question";
 import Footer from "./components/footer/Footer";
+
+
+
+
 function App() {
   return (
     <div>
