@@ -34,7 +34,7 @@
 .text {
   font-size: 0.9rem;
   line-height: 1.6; /* فاصله بین خطوط */
-  color: #555; /* خاکستری تیره */
+  color: #ffffff; /* خاکستری تیره */
 }
 
 /* 🔗 بخش آیکون‌های شبکه‌های اجتماعی */
@@ -72,13 +72,13 @@
 /* ظاهر لینک‌ها در حالت عادی */
 .col a {
   text-decoration: none;
-  color: #444;
+  color: #ffffff;
   transition: 0.2s;
 }
 
 /* رنگ لینک‌ها هنگام هاور */
 .col a:hover {
-  color: #2563eb;
+  color: #f5b207;
 }
 
 /* 💌 فرم خبرنامه */
@@ -93,7 +93,7 @@
 .form input {
   flex: 1; /* پر کردن عرض باقیمانده */
   padding: 8px 10px;
-  border: 1px solid #ddd;
+  border: 1px solid #f5b207;
   border-radius: 5px;
   outline: none;
   font-size: 0.9rem;
@@ -101,40 +101,20 @@
 
 /* تغییر رنگ حاشیه در حالت فوکوس */
 .form input:focus {
-  border-color: #2563eb;
+  border-color: #f5b207;
 }
 
-/* 🔘 دکمه عضویت */
-.form button {
-  background-color: #2563eb;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  padding: 8px 16px;
-  cursor: pointer;
-  transition: 0.2s;
-}
 
-/* رنگ دکمه در حالت هاور */
-.form button:hover {
-  background-color: #1e40af;
-}
 
-/* ✉️ پیام موفقیت یا خطای عضویت */
-.msg {
-  font-size: 0.85rem;
-  margin-top: 8px;
-  color: #2563eb;
-}
 
 /* ⚫ بخش پایین فوتر (کپی‌رایت و لینک‌ها) */
 .bottom {
-  border-top: 1px solid #ddd; /* خط جداکننده بالا */
+  border-top: 1px solid #f5b207; /* خط جداکننده بالا */
   margin-top: 40px;
   padding-top: 15px;
   text-align: center;
   font-size: 0.85rem;
-  color: #555;
+  color: #ffffff;
 }
 
 /* 🔗 لینک‌های پایین فوتر (مثل نقشه سایت) */
@@ -147,14 +127,14 @@
 
 /* رنگ و ظاهر لینک‌های پایین فوتر */
 .links a {
-  color: #444;
+  color: #ffffff;
   text-decoration: none;
   transition: 0.2s;
 }
 
 /* تغییر رنگ لینک‌ها هنگام هاور */
 .links a:hover {
-  color: #2563eb;
+  color: #f5b207;
 }
 
 /* 📱 --- تنظیمات ریسپانسیو برای موبایل --- */
