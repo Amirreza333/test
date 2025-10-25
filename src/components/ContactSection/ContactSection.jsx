@@ -1,5 +1,5 @@
 import React from "react";
-import "./Contact.css"; // ماژول CSS جداگانه
+import "./ContactSection.css"; // ماژول CSS جداگانه
 
 const Contact = () => {
   return (
