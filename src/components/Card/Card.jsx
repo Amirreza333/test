@@ -1,6 +1,11 @@
 import React, { useState } from "react";
 import { FaArrowCircleLeft } from "react-icons/fa";
 import style from "../Card/card.module.css";
+import {Link} from "react-router-dom";
+
+
+
+
 
 
 const CardSection = () => {
@@ -164,7 +169,8 @@ const CardSection = () => {
             };
 
             return (
-              <div
+              <link 
+              to={'/src/components/page/Service.jsx'}
                 key={service.id}
                 style={cardStyle}
                 onMouseEnter={() => setHovered(service.id)}
@@ -186,7 +192,7 @@ const CardSection = () => {
                     {service.description}
                   </p>
                 </div>
-              </div>
+              </link>
             );
           })}
         </div>
