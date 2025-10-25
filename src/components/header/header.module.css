@@ -15,7 +15,7 @@ div {
   top: 0;
   left: 0;
   right: 0;
-  background: #0738697d;
+  background: #12223b8f;
   box-shadow: 0 2px 6px rgba(214, 28, 28, 0.08);
   font-family: "Vazir", sans-serif;
   z-index: 1000;
@@ -34,7 +34,7 @@ div {
 
 /* ---------- نوار بالا ---------- */
 .bu-topbar {
-  background-color: #073869;
+  background-color: #12223b;
   color: #fff;
   font-size: 14px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);

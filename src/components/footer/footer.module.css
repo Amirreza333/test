@@ -1,0 +1,158 @@
+.footer {
+  background-color: #12223b;
+  color: #333;
+  padding: 60px 20px 20px;
+  font-family: "IRANSans", sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 30px;
+}
+
+.col h4 {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  color: #f5b207;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #f5b207;
+}
+
+.text {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+.socials {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+}
+
+.socials a {
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: #444;
+  transition: 0.2s;
+}
+
+.socials a:hover {
+  color: #2563eb;
+}
+
+.col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.col li {
+  margin-bottom: 8px;
+}
+
+.col a {
+  text-decoration: none;
+  color: #444;
+  transition: 0.2s;
+}
+
+.col a:hover {
+  color: #2563eb;
+}
+
+/* خبرنامه */
+.form {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.form input {
+  flex: 1;
+  padding: 8px 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  outline: none;
+  font-size: 0.9rem;
+}
+
+.form input:focus {
+  border-color: #2563eb;
+}
+
+.form button {
+  background-color: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.form button:hover {
+  background-color: #1e40af;
+}
+
+.msg {
+  font-size: 0.85rem;
+  margin-top: 8px;
+  color: #2563eb;
+}
+
+/* پایین فوتر */
+.bottom {
+  border-top: 1px solid #ddd;
+  margin-top: 40px;
+  padding-top: 15px;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.links {
+  margin-top: 8px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.links a {
+  color: #444;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.links a:hover {
+  color: #2563eb;
+}
+
+/* --- ریسپانسیو --- */
+@media (max-width: 768px) {
+  .footer {
+    padding: 40px 15px 15px;
+  }
+
+  .form {
+    flex-direction: column;
+  }
+
+  .form button {
+    width: 100%;
+  }
+
+  .links {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
