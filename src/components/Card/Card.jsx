@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { FaArrowCircleLeft } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
-
 const Card = () => {
   const [hovered, setHovered] = useState(null);
 
@@ -17,6 +16,7 @@ const Card = () => {
       description:
         "طراحی مدرن و کاربردی فضاهای داخلی با رعایت اصول ارگونومی و زیبایی‌شناسی.",
       image: "/Picture/طراحی داخل ساختمان.jpg",
+      link: "InteriorDesign", 
     },
     {
       id: 2,
@@ -24,12 +24,14 @@ const Card = () => {
       description:
         "اجرای پروژه‌های ساختمانی با استفاده از مصالح باکیفیت و تیم متخصص.",
       image: "/Picture/ساخت و ساز 2.jpeg",
+      link: "/ServiceConstruction", 
     },
     {
       id: 3,
       title: "مشاوره و نظارت",
       description: "ارائه مشاوره تخصصی و نظارت بر اجرای پروژه‌های ساختمانی.",
       image: "/Picture/مشاور ساختمان 1.jpg",
+      link: "/consulting", 
     },
   ];
 
@@ -156,18 +158,28 @@ const Card = () => {
             return (
               <Link
                 key={service.id}
-                to="/ServiceConstruction"
-                style={{ textDecoration: "none", color: "inherit", display: "block" }}
+                to={service.link} 
+                style={{
+                  textDecoration: "none",
+                  color: "inherit",
+                  display: "block",
+                }}
                 onMouseEnter={() => setHovered(service.id)}
                 onMouseLeave={() => setHovered(null)}
               >
                 <div style={cardStyle}>
                   <div style={imageWrapper}>
-                    <img src={service.image} alt={service.title} style={imgStyle} />
+                    <img
+                      src={service.image}
+                      alt={service.title}
+                      style={imgStyle}
+                    />
                   </div>
                   <div style={contentWrapper}>
                     <h3 style={titleCardStyle}>{service.title}</h3>
-                    <p dir="rtl" style={descStyle}>{service.description}</p>
+                    <p dir="rtl" style={descStyle}>
+                      {service.description}
+                    </p>
                   </div>
                 </div>
               </Link>
