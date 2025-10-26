@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './Footer.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
+import img from '/Picture/FZPR3073.PNG'; // مسیر درست لوگو از public
 
 const Footer = () => {
   const [email, setEmail] = useState('');
@@ -33,7 +34,7 @@ const Footer = () => {
             {/* ستون درباره ما */}
             <div className="col-lg-3 col-md-6">
               <div className="footer-widget">
-                <h5>درباره Builtup</h5>
+                <img src={img} alt="Builtup Logo" className="footer-logo" />
                 <p>
                   شرکت Builtup ارائه‌دهنده خدمات طراحی و توسعه وب‌سایت‌های شرکتی است. ما با تمرکز بر کیفیت و نوآوری، پروژه‌های شما را به بهترین شکل اجرا می‌کنیم.
                 </p>
@@ -141,9 +142,9 @@ const Footer = () => {
           <div className="row align-items-center">
             <div className="col-md-6">
               <p>
-                &copy; ۱۴۰۴ Builtup. تمامی حقوق محفوظ است. | طراحی شده توسط{' '}
-                <a href="https://rtl-theme.com" target="_blank" rel="noopener noreferrer">
-                  RTL Theme
+                &copy;  dena sun تمامی حقوق محفوظ است. | طراحی شده توسط{' '}
+                <a href="https://oyek.tech/" target="_blank" rel="noopener noreferrer">
+                  oyek.net
                 </a>
               </p>
             </div>

@@ -1,11 +1,11 @@
 .projectsSection {
   padding: 60px 16px;
-  background: linear-gradient(135deg, #e9f7fe, #e9f7fe); /* پس‌زمینه آبی */
+  background: linear-gradient(135deg, #e9f7fe, #e9f7fe); 
   font-family: "yekan", sans-serif;
   border-radius: 16px;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1); /* سایه ملایم */
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1); 
 }
 
 .container {
@@ -26,6 +26,8 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 32px;
+  padding-right: 50px;
+  padding-left: 54px;
 }
 
 .card {
@@ -34,6 +36,7 @@
   overflow: hidden;
   cursor: pointer;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
+  
  
 }
 

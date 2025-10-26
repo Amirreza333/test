@@ -1,4 +1,4 @@
-/* ------------------ فونت یکان ------------------ */
+
 @font-face {
   font-family: "yekan";
   src: url(../../../Font/Yekan.ttf) format("truetype");
@@ -6,7 +6,11 @@
   font-style: normal;
 }
 
-/* تمام نوشته‌ها پیش‌فرض فونت یکان را دارند */
+
+html, body, div, p, h1, h2, h3, h4, h5, h6, span, button {
+  font-family: 'yekan', sans-serif;
+}
+
 html,
 body,
 div,
@@ -20,15 +24,21 @@ h6,
 span,
 button {
   font-family: "yekan", sans-serif;
+
 }
 
-/* ------------------ ساختار اصلی ------------------ */
+
 .container {
   direction: ltr;
   text-align: right;
   padding: 3rem 2rem;
   background-color: #fff;
+
+  font-family: 'yekan', sans-serif;
+  
+
   font-family: "yekan", sans-serif;
+
 }
 
 .content {
@@ -76,16 +86,17 @@ button {
   flex: 1;
   display: flex;
   justify-content: center;
+  height: 400px;
 }
 
 .image {
   width: 100%;
-  max-width: 500px;
+  max-width: 370px;
   border-radius: 12px;
   object-fit: cover;
 }
 
-/* ------------------ لیست چک ------------------ */
+
 .checklist {
   font-family: "yekan", sans-serif;
   background-color: rgba(233, 247, 254);
@@ -124,7 +135,7 @@ button {
   color: #333;
 }
 
-/* ------------------ واکنش‌گرا ------------------ */
+
 @media (max-width: 900px) {
   .content {
     flex-direction: column;
@@ -142,7 +153,7 @@ button {
   }
 }
 
-/* ------------------ دکمه و CTA ------------------ */
+
 .cta {
   padding-right: 5px;
   padding-bottom: 5px;
@@ -192,9 +203,9 @@ button {
   color: #333;
 }
 
-/* ------------------ Media Queries ------------------ */
 
-/* تبلت و موبایل بزرگ */
+
+
 @media (max-width: 1024px) {
   .content {
     flex-direction: column;
@@ -222,7 +233,7 @@ button {
   }
 }
 
-/* موبایل کوچک */
+
 @media (max-width: 768px) {
   .title {
     font-size: 1.8rem;
@@ -248,7 +259,7 @@ button {
   }
 }
 
-/* موبایل خیلی کوچک */
+
 @media (max-width: 480px) {
   .subtitle {
     font-size: 1rem;
