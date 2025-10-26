@@ -8,6 +8,8 @@ import Comments from "./components/Comment Section/Comments";
 import Question from "./components/soal section/Question";
 import Contact from "./components/ContactSection/ContactSection";
 import Footer from "./components/footer/Footer";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./index.css";
 
 function App() {
   return (
