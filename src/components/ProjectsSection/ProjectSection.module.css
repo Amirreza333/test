@@ -66,7 +66,7 @@
   padding-left: 140px;
   position: absolute;
   bottom: 16px;
-  left: 16px;
+  left: 3px;
   font-size: 20px;
   font-weight: 700;
   color: #fff;
@@ -105,7 +105,7 @@
   margin: 0;
   line-height: 1.5;
    font-family: yekan;
-   padding-right: 20px;
+   padding-left: 20px;
 }
 
 .buttonWrapper {
@@ -134,7 +134,7 @@
   transform: translateY(-3px);
 }
 
-/* Media Queries */
+
 @media (max-width: 1200px) {
   .grid {
     grid-template-columns: repeat(3, 1fr);

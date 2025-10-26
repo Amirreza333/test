@@ -1,0 +1,22 @@
+body {
+  font-family: "Vazir", sans-serif;
+  direction: rtl;
+}
+
+.aspen-hero {
+  background: url("/Picture/beatiful buildings (1).webp") center/cover no-repeat;
+  height: 80vh;
+  color: white;
+}
+
+.features {
+  background: #fff;
+}
+
+.gallery {
+  background: #f8f9fa;
+}
+
+.contact {
+  background: #343a40;
+}

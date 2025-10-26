@@ -12,6 +12,7 @@ import Contact from "./components/ContactSection/ContactSection";
 import ServiceConstruction from "./components/pages/Service/ServiceConstruction";
 import InteriorDesign from "./components/pages/Service/interior-design/InteriorDesign";
 import Consulting from "./components/pages/Service/moshavere/Consulting";
+import IcePenhouse from "./components/pages/Service/AspenHeights/AspenHeights"; // حرف بزرگ
 
 function App() {
   return (
@@ -35,6 +36,8 @@ function App() {
         <Route path="/ServiceConstruction" element={<ServiceConstruction />} />
         <Route path="/InteriorDesign" element={<InteriorDesign />} />
         <Route path="/consulting" element={<Consulting />} />
+        <Route path="/IcePenhouse" element={<IcePenhouse />} />
+
       </Route>
     </Routes>
   );
