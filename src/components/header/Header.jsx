@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Style from "./Header.module.css";
 import Imgo from "../../../public/Picture/FZPR3073.PNG";
+import { MotionConfig, motion } from "framer-motion";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -21,6 +22,7 @@ export default function Header() {
                 ثبت سفارش
               </a>
             </div> */}
+          
           </div>
         </div>
       </div>

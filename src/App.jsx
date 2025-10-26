@@ -8,20 +8,29 @@ import Comments from "./components/Comment Section/Comments";
 import Question from "./components/soal section/Question";
 import Contact from "./components/ContactSection/ContactSection";
 import Footer from "./components/footer/Footer";
+import ClickSpark from "./Animation/click/Click";
 
 function App() {
   return (
     <div>
-      <Header />
-      <Body />
-      <Card />
-      <WhyChooseUs />
-      <ProjectsSection />
-      <Card2 />
-      <Comments />
-      <Question />
-      <Contact />
-      <Footer />
+      <ClickSpark
+        sparkColor="#000"
+        sparkSize={10}
+        sparkRadius={15}
+        sparkCount={8}
+        duration={400}
+      >
+        <Header />
+        <Body />
+        <Card />
+        <WhyChooseUs />
+        <ProjectsSection />
+        <Card2 />
+        <Comments />
+        <Question />
+        <Contact />
+        <Footer />
+      </ClickSpark>
     </div>
   );
 }
