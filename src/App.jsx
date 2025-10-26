@@ -1,5 +1,7 @@
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import Layout from "./components/layout/Layout";
 import Body from "./components/Body/Body";
-import Header from "./components/header/Header";
 import Card from "./components/Card/Card";
 import WhyChooseUs from "./components/WhyChooseUs/WhyChooseUs";
 import ProjectsSection from "./components/ProjectsSection/ProjectsSection";
@@ -10,29 +12,38 @@ import Contact from "./components/ContactSection/ContactSection";
 import Footer from "./components/footer/Footer";
 import ClickSpark from "./Animation/click/Click";
 
+import ServiceConstruction from "./components/pages/Service/ServiceConstruction";
+import InteriorDesign from "./components/pages/Service/interior-design/InteriorDesign";
+import Consulting from "./components/pages/Service/moshavere/Consulting";
+
+
+
+
 function App() {
   return (
-    <div>
-      <ClickSpark
-        sparkColor="#000"
-        sparkSize={10}
-        sparkRadius={15}
-        sparkCount={8}
-        duration={400}
-      >
-        <Header />
-        <Body />
-        <Card />
-        <WhyChooseUs />
-        <ProjectsSection />
-        <Card2 />
-        <Comments />
-        <Question />
-        <Contact />
-        <Footer />
-      </ClickSpark>
-    </div>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route
+          index
+          element={
+            <>
+              <Body />
+              <Card />
+              <WhyChooseUs />
+              <ProjectsSection />
+              <Card2 />
+              <Comments />
+              <Question />
+              <Contact />
+            </>
+          }
+        />
+        <Route path="/ServiceConstruction" element={<ServiceConstruction />} />
+        <Route path="/InteriorDesign" element={<InteriorDesign />} />
+        <Route path="/consulting" element={<Consulting />} />
+      </Route>
+    </Routes>
   );
 }
 
-export default App;
+  export default App;
