@@ -2,8 +2,8 @@
 
 /* === متغیرهای اصلی برای ثبات در طراحی === */
 :root {
-  --primary-color: #7a1fff; /* رنگ بنفش جذاب برای لوکس‌تر شدن */
-  --secondary-color: #5d00cc;
+  --primary-color: #fcb53b; /* رنگ بنفش جذاب برای لوکس‌تر شدن */
+  --secondary-color: #fda000;
   --background-light: #f4f7f9;
   --text-dark: #1e272e;
   --card-bg: rgba(255, 255, 255, 0.95);
@@ -59,7 +59,7 @@
 .contactForm textarea:focus {
   border-color: var(--primary-color);
   outline: none;
-  box-shadow: 0 0 0 4px rgba(122, 31, 255, 0.1);
+  box-shadow: 0 0 0 4px #fcb53b57;
 }
 
 /* استایل دهی خاص به textarea */
@@ -77,19 +77,24 @@
   );
   color: #fff;
   border: none;
-  border-radius: 15px;
+  border-radius: 16px;
   padding: 1.2rem 2.5rem;
   font-weight: 700;
   font-size: 1.2rem;
   cursor: pointer;
   transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-  box-shadow: 0 8px 20px rgba(122, 31, 255, 0.4);
+  /* box-shadow: 0 8px 20px #fcb53b; */
 }
 
 .contactForm button:hover {
-  background: linear-gradient(135deg, #6a00db, #4c0099);
-  box-shadow: 0 12px 30px rgba(122, 31, 255, 0.6);
-  transform: translateY(-3px);
+  background: #12295cff;
+  /* box-shadow: 0 12px 30px #fcb53b; */
+  transform: translateY(-4px);
+}
+
+.contactForm button:active{
+  transform: translateX(0px);
+  transform: translateY(0px);
 }
 
 /* ==== ریسپانسیو (موبایل) - حفظ استایل لوکس و مقیاس‌پذیری === */

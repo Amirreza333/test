@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./ContactSection.module.css";
+import TextType from "../../Animation/click/texttype/TextType";
 
 const Contact = () => {
   const handleSubmit = (e) => {
@@ -13,8 +14,15 @@ const Contact = () => {
 
       {/* 📨 فرم تماس */}
       <div className={styles.formSection}>
-        <h3>با ما تماس بگیرید</h3>
-        <h2 className={styles.subHeader}>با ما در تماس باشید</h2>
+        <TextType 
+          className={styles.subHeader}
+  text={["با ما ارتباط بگیرید", "با ما در ارتباط باشید", ]}
+  typingSpeed={75}
+  pauseDuration={1500}
+  showCursor={true}
+  cursorCharacter="|"
+/>
+        <h2 ></h2>
 
         <form onSubmit={handleSubmit} className={styles.contactForm}>
           <div className={styles.row}>
