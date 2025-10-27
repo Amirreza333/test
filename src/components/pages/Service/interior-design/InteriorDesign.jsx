@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"; // Added useEffect
+import React, { useState, useEffect } from "react"; 
 import { FaArrowCircleLeft, FaStar } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import styles from "./interiorDesign.module.css";
