@@ -9,10 +9,16 @@ import Card2 from "./components/Card with picture/Card2";
 import Comments from "./components/Comment Section/Comments";
 import Question from "./components/soal section/Question";
 import Contact from "./components/ContactSection/ContactSection";
+
+import Footer from "./components/footer/Footer";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./index.css";
+
 import ServiceConstruction from "./components/pages/Service/ServiceConstruction";
 import InteriorDesign from "./components/pages/Service/interior-design/InteriorDesign";
 import Consulting from "./components/pages/Service/moshavere/Consulting";
 import IcePenhouse from "./components/pages/Service/AspenHeights/AspenHeights"; // حرف بزرگ
+
 
 function App() {
   return (

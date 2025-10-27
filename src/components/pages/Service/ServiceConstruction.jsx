@@ -4,6 +4,7 @@ import styles from "./serviceconstruction.module.css";
 const Construction = () => {
   const [hovered, setHovered] = useState(null);
   const [counts, setCounts] = useState([0, 0, 0, 0]);
+  const [isLoaded, setIsLoaded] = useState(false);
 
   const projectsData = [
     {
@@ -36,8 +37,13 @@ const Construction = () => {
     { feature: "گارانتی خدمات (سال)", value: 5 },
   ];
 
-  
   useEffect(() => {
+ 
+    window.scrollTo({ top: 0, behavior: "instant" });
+
+
+    setIsLoaded(true);
+
     const interval = setInterval(() => {
       setCounts((prev) =>
         prev.map((val, idx) => {
@@ -52,12 +58,11 @@ const Construction = () => {
     }, 20);
 
     return () => clearInterval(interval);
-  }, []);
+  }, []); 
 
   return (
-    <section className={styles.section}>
+    <section className={`${styles.section} ${isLoaded ? styles.active : ""}`}>
       <div className={styles.container}>
-        
         <div className={styles.header}>
           <img
             src="/Picture/بنر صفحه.png"
@@ -71,7 +76,6 @@ const Construction = () => {
           </p>
         </div>
 
-        
         <div className={styles.tableWrapper}>
           <table className={styles.featureTable}>
             <tbody>
@@ -85,7 +89,6 @@ const Construction = () => {
           </table>
         </div>
 
-        
         <div className={styles.cards}>
           {projectsData.map((project) => (
             <div
@@ -112,12 +115,11 @@ const Construction = () => {
           ))}
         </div>
 
-        
         <div className={styles.contact}>
           <p>برای دریافت مشاوره یا شروع پروژه جدید با ما در تماس باشید.</p>
           <button
             className={styles.contactBtn}
-            onClick={() => ("tel:+98221125")}
+            onClick={() => (window.location.href = "tel:+98221125")}
           >
             تماس با ما
           </button>

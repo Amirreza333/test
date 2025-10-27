@@ -1,0 +1,159 @@
+/* استایل کلی فوتر - RTL سازگار */
+.footer-section {
+  background-color: #12223b;
+  color: #771414;
+  font-family: "Vazir", sans-serif;
+  direction: rtl;
+}
+
+.footer-top {
+  padding: 60px 0 40px;
+}
+
+.footer-widget h5 {
+  color: #f5b207;
+  margin-bottom: 20px;
+  font-size: 18px;
+  border-bottom: 2px solid #ffffff;
+  padding-bottom: 10px;
+}
+
+.footer-widget p {
+  color: #ffffff;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.footer-widget ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-widget ul li {
+  margin-bottom: 10px;
+}
+
+.footer-widget ul li a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-widget ul li a:hover {
+  color: #f5b207;
+}
+
+.social-links {
+  margin-top: 15px;
+}
+
+.social-links a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: #0d131a;
+  color: #fff;
+  text-align: center;
+  line-height: 40px;
+  margin-left: 10px;
+  border-radius: 50%;
+  transition: background 0.3s;
+}
+
+.social-links a:hover {
+  background: #f5b207;
+}
+
+.newsletter-form {
+  display: flex;
+  margin-top: 15px;
+}
+
+.newsletter-form input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 5px 0 0 5px;
+  direction: ltr;
+}
+
+.newsletter-form button {
+  padding: 10px 20px;
+  background: #f5b207;
+  color: #ffffff;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.newsletter-form button:hover {
+  background: #f5b207;
+}
+
+.footer-bottom {
+  background: #0d0d0d;
+  padding: 20px 0;
+  border-top: 1px solid #f5b207;
+}
+
+.footer-bottom p {
+  margin: 0;
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.footer-bottom-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.footer-bottom-links li {
+  margin-left: 20px;
+}
+
+.footer-bottom-links a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-bottom-links a:hover {
+  color: #f5b207;
+}
+
+/* استایل لوگو */
+.footer-logo {
+  height: 150px; /* ارتفاع مناسب برای لوگو */
+  width: auto; /* حفظ نسبت تصویر */
+  margin-bottom: 30px; /* فاصله از متن زیر */
+  display: block; /* تراز بهتر */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-top {
+    padding: 40px 0 20px;
+  }
+
+  .newsletter-form {
+    flex-direction: column;
+  }
+
+  .newsletter-form input {
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+
+  .newsletter-form button {
+    border-radius: 5px;
+  }
+
+  .footer-bottom-links {
+    justify-content: center;
+    margin-top: 10px;
+  }
+}

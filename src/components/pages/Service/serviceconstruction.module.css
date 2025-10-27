@@ -1,12 +1,45 @@
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, #root {
+  margin: 0; 
+  padding: 0;
+  min-height: 100vh;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
 .section {
   background-color: #f9f9f9;
-  padding: 60px 16px;
+  padding: 0 16px 60px;
   display: flex;
+  justify-content: flex-start;
   flex-direction: column;
   align-items: center;
   font-family: yekan, sans-serif;
   direction: rtl;
+  min-height: 100vh;
+  opacity: 0;
+  transform: translateY(); 
+  animation: fadeIn 0.5s ease forwards; 
+  padding-top: 120px;
+}
+
+
+@keyframes fadeIn {
+  100% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .container {
@@ -30,6 +63,7 @@
   object-fit: cover;
   border-radius: 12px;
   margin-bottom: 30px;
+  display: block;
 }
 
 .title {
@@ -178,7 +212,6 @@
 .contactBtn:hover {
   background-color: #12295c;
 }
-
 
 @media (max-width: 1024px) {
   .cards {

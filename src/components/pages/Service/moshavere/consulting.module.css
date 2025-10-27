@@ -4,6 +4,7 @@
   background-color: #f4f7fa;
   padding: 20px 16px;
   line-height: 1.6;
+  padding-top: 130px;
 }
 
 .hero {
@@ -78,6 +79,7 @@
   justify-content: center;
   gap: 20px;
   flex-wrap: wrap;
+  
 }
 
 .benefitItem {
