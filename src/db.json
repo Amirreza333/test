@@ -1,0 +1,16 @@
+{
+  "projects": [
+    { "id": 1, "title": "آسپن هایتس", "status": "در حال ساخت", "progress": 75 },
+    { "id": 2, "title": "ویلای لوکس شمال", "status": "تکمیل شده", "progress": 100 }
+  ],
+  "clients": [
+    { "id": 1, "name": "علی محمدی", "phone": "09123456789", "project": "آسپن هایتس" },
+    { "id": 2, "name": "سارا احمدی", "phone": "09987654321", "project": "ویلای لوکس" }
+  ],
+  "stats": {
+    "totalProjects": 12,
+    "completed": 8,
+    "inProgress": 4,
+    "totalRevenue": "2,450,000,000"
+  }
+}

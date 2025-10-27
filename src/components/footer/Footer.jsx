@@ -72,7 +72,6 @@ const Footer = () => {
                 </div>
               </div>
             </div>
-            {/* ستون لینک‌های مفید */}
             <div className="col-lg-3 col-md-6">
               <div className="footer-widget">
                 <h5>لینک‌های مفید</h5>
@@ -120,7 +119,6 @@ const Footer = () => {
                 </ul>
               </div>
             </div>
-            {/* ستون خدمات */}
             <div className="col-lg-3 col-md-6">
               <div className="footer-widget">
                 <h5>خدمات ما</h5>
@@ -160,7 +158,6 @@ const Footer = () => {
                 </ul>
               </div>
             </div>
-            {/* ستون خبرنامه */}
             <div className="col-lg-3 col-md-6">
               <div className="footer-widget">
                 <h5>خبرنامه</h5>
@@ -186,7 +183,6 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* بخش کپی‌رایت */}
       <div className="footer-bottom">
         <div className="container">
           <div className="row align-items-center">

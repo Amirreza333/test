@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react"; // Added useEffect
 import { FaArrowCircleLeft, FaStar } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import styles from "./consulting.module.css";
@@ -58,6 +58,11 @@ const Consulting = () => {
       rating: 4.5,
     },
   ];
+
+  // Add useEffect to scroll to top on component mount
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "instant" });
+  }, []); // Empty dependency array ensures this runs only on mount
 
   return (
     <div className={styles.section}>
