@@ -35,7 +35,7 @@ const Contact = () => {
             <input type="text" placeholder="موضوع پیام" required />
           </div>
 
-          <textarea placeholder="متن پیام شما..." required></textarea>
+          <textarea placeholder="انتقاد از ما..." required></textarea>
           <button type="submit">ارسال پیام</button>
         </form>
       </div>
