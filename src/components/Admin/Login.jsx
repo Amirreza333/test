@@ -27,7 +27,10 @@ const Login = () => {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    if (name === ADMIN_CREDENTIALS.name && password === ADMIN_CREDENTIALS.password) {
+    if (
+      name === ADMIN_CREDENTIALS.name &&
+      password === ADMIN_CREDENTIALS.password
+    ) {
       localStorage.setItem("adminLoggedIn", "true");
       localStorage.setItem("adminName", name);
       navigate("/admin");
@@ -169,8 +172,12 @@ const Login = () => {
             </Button>
           </form>
 
-          <Typography variant="caption" color="text.secondary" sx={{ mt: 3, display: "block", textAlign: "center" }}>
-            نام: <strong>ادمین</strong> | رمز: <strong>123456</strong>
+          <Typography
+            variant="caption"
+            color="text.secondary"
+            sx={{ mt: 3, display: "block", textAlign: "center" }}
+          >
+            <strong></strong> <strong></strong>
           </Typography>
         </CardContent>
       </Card>

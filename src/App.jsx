@@ -1,6 +1,5 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-
 import Layout from "./components/layout/Layout";
 import Body from "./components/Body/Body";
 import Card from "./components/Card/Card";
@@ -10,11 +9,9 @@ import Card2 from "./components/Card with picture/Card2";
 import Comments from "./components/Comment Section/Comments";
 import Question from "./components/soal section/Question";
 import Contact from "./components/ContactSection/ContactSection";
-
 import ServiceConstruction from "./components/pages/Service/ServiceConstruction";
 import InteriorDesign from "./components/pages/Service/interior-design/InteriorDesign";
 import Consulting from "./components/pages/Service/moshavere/Consulting";
-
 import AdminLayout from "./components/admin/AdminLayout";
 import Dashboard from "./components/admin/Dashboard";
 import ProjectList from "./components/admin/ProjectList";
@@ -31,7 +28,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route
-        
+          index
           element={
             <>
               <Body />
@@ -83,47 +80,46 @@ function App() {
         }
       />
       <Route
-  path="/admin/comments"
-  element={
-    <ProtectedRoute>
-      <AdminLayout>
-        <CommentList />
-      </AdminLayout>
-    </ProtectedRoute>
-  }
-/>
-<Route
-  path="/admin/contacts"
-  element={
-    <ProtectedRoute>
-      <AdminLayout>
-        <ContactList />
-      </AdminLayout>
-    </ProtectedRoute>
-  }
-/>
-<Route
-  path="/admin/stats"
-  element={
-    <ProtectedRoute>
-      <AdminLayout>
-        <Stats />
-      </AdminLayout>
-    </ProtectedRoute>
-  }
-/>
-<Route
-  path="/admin/settings"
-  element={
-    <ProtectedRoute>
-      <AdminLayout>
-        <Settings />
-      </AdminLayout>
-    </ProtectedRoute>
-  }
-/>
+        path="/admin/comments"
+        element={
+          <ProtectedRoute>
+            <AdminLayout>
+              <CommentList />
+            </AdminLayout>
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/admin/contacts"
+        element={
+          <ProtectedRoute>
+            <AdminLayout>
+              <ContactList />
+            </AdminLayout>
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/admin/stats"
+        element={
+          <ProtectedRoute>
+            <AdminLayout>
+              <Stats />
+            </AdminLayout>
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/admin/settings"
+        element={
+          <ProtectedRoute>
+            <AdminLayout>
+              <Settings />
+            </AdminLayout>
+          </ProtectedRoute>
+        }
+      />
     </Routes>
-    
   );
 }
 

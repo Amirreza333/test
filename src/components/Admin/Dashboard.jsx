@@ -16,6 +16,7 @@ import {
   TableRow,
   Paper,
   Chip,
+  Container,
 } from "@mui/material";
 import {
   Construction,
@@ -25,7 +26,6 @@ import {
   Phone,
   CheckCircle,
   Pending,
-  Cancel,
 } from "@mui/icons-material";
 import {
   LineChart,
@@ -78,14 +78,14 @@ const Dashboard = () => {
   }, []);
 
   const StatCard = ({ title, value, icon, color, trend }) => (
-    <Card sx={{ borderRadius: 3, boxShadow: 3, bgcolor: "#fff" }}>
+    <Card sx={{ borderRadius: 2, boxShadow: 2, bgcolor: "#fff", height: "100%" }}>
       <CardContent>
         <Box display="flex" justifyContent="space-between" alignItems="center">
           <Box>
             <Typography variant="body2" color="text.secondary" gutterBottom>
               {title}
             </Typography>
-            <Typography variant="h4" fontWeight="bold" color={color}>
+            <Typography variant="h5" fontWeight="bold" color={color}>
               {value}
             </Typography>
             {trend && (
@@ -94,7 +94,7 @@ const Dashboard = () => {
               </Typography>
             )}
           </Box>
-          <Avatar sx={{ bgcolor: `${color}15`, color, width: 56, height: 56 }}>
+          <Avatar sx={{ bgcolor: `${color}15`, color, width: 48, height: 48 }}>
             {icon}
           </Avatar>
         </Box>
@@ -103,12 +103,12 @@ const Dashboard = () => {
   );
 
   return (
-    <Box sx={{ p: { xs: 2, md: 3 }, fontFamily: "yekan" }}>
-      <Typography variant="h4" fontWeight="bold" mb={4} color="#222">
+    <Container maxWidth="lg" sx={{ py: { xs: 2, sm: 3 }, fontFamily: "yekan",  }}>
+      <Typography variant="h4" fontWeight="bold" mb={3} color="#222" textAlign="center">
         داشبورد مدیریت
       </Typography>
 
-      <Grid container spacing={3} mb={5}>
+      <Grid container spacing={2} mb={4}>
         <Grid item xs={12} sm={6} md={3}>
           <StatCard title="پروژه‌های فعال" value={stats.activeProjects} icon={<Construction />} color="#fcb53b" trend="+۲" />
         </Grid>
@@ -123,12 +123,12 @@ const Dashboard = () => {
         </Grid>
       </Grid>
 
-      <Grid container spacing={3} mb={5}>
+      <Grid container spacing={2} mb={4}>
         <Grid item xs={12} lg={7}>
-          <Card sx={{ borderRadius: 3, boxShadow: 3, height: "100%" }}>
+          <Card sx={{ borderRadius: 2, boxShadow: 2, height: "100%" }}>
             <CardHeader title="درآمد و پروژه‌های ماهانه" />
             <CardContent>
-              <ResponsiveContainer width="100%" height={320}>
+              <ResponsiveContainer width="100%" height={300}>
                 <LineChart data={monthlyData}>
                   <CartesianGrid strokeDasharray="3 3" />
                   <XAxis dataKey="month" />
@@ -144,16 +144,11 @@ const Dashboard = () => {
           </Card>
         </Grid>
 
-        
         <Grid item xs={12} lg={5}>
-          <Card sx={{ borderRadius: 3, boxShadow: 3, height: "100%" }}>
+          <Card sx={{ borderRadius: 2, boxShadow: 2, height: "100%" }}>
             <CardHeader 
               title="آخرین تماس‌ها" 
-              sx={{ 
-                bgcolor: "#fcb53b", 
-                color: "#fff",
-                "& .MuiCardHeader-title": { fontWeight: "bold" }
-              }} 
+              sx={{ bgcolor: "#fcb53b", color: "#fff", "& .MuiCardHeader-title": { fontWeight: "bold" } }} 
             />
             <CardContent sx={{ p: 0 }}>
               {recentContacts.map((contact, index) => (
@@ -161,43 +156,26 @@ const Dashboard = () => {
                   key={contact.id}
                   sx={{
                     display: "flex",
+                  
                     alignItems: "center",
                     justifyContent: "space-between",
-                    p: 2.5,
+                    p: 2,
                     borderBottom: index < recentContacts.length - 1 ? "1px solid #eee" : "none",
-                    transition: "all 0.2s",
                     "&:hover": { bgcolor: "#fff9e6" }
                   }}
                 >
-                  <Box display="flex" alignItems="center" gap={2}>
-                    <Avatar 
-                      sx={{ 
-                        bgcolor: "#fcb53b", 
-                        color: "#fff", 
-                        fontWeight: "bold",
-                        width: 48, 
-                        height: 48 
-                      }}
-                    >
+                  <Box display="flex" alignItems="center" gap={1.5}>
+                    <Avatar sx={{ bgcolor: "#fcb53b", color: "#fff", fontWeight: "bold", width: 40, height: 40 }}>
                       {contact.avatar}
                     </Avatar>
                     <Box>
-                      <Typography fontWeight="bold" fontSize="1rem">
-                        {contact.name}
-                      </Typography>
-                      <Typography variant="body2" color="text.secondary">
-                        {contact.project}
-                      </Typography>
-                      <Typography variant="caption" color="gray">
-                        {contact.phone}
-                      </Typography>
+                      <Typography fontWeight="bold" fontSize="0.95rem">{contact.name}</Typography>
+                      <Typography variant="body2" color="text.secondary">{contact.project}</Typography>
                     </Box>
                   </Box>
-                  <Box textAlign="right">
-                    <Typography variant="caption" color="success.main" fontWeight="bold">
-                      {contact.time}
-                    </Typography>
-                  </Box>
+                  <Typography variant="caption" color="success.main" fontWeight="bold">
+                    {contact.time}
+                  </Typography>
                 </Box>
               ))}
             </CardContent>
@@ -205,12 +183,11 @@ const Dashboard = () => {
         </Grid>
       </Grid>
 
-      
-      <Card sx={{ borderRadius: 3, boxShadow: 3 }}>
+      <Card sx={{ borderRadius: 2, boxShadow: 2 }}>
         <CardHeader title="وضعیت پروژه‌ها" />
-        <CardContent>
+        <CardContent sx={{ p: 0, overflowX: "auto" }}>
           <TableContainer component={Paper} elevation={0}>
-            <Table>
+            <Table sx={{ minWidth: 650 }}>
               <TableHead>
                 <TableRow sx={{ bgcolor: "#f9f9f9" }}>
                   <TableCell sx={{ fontWeight: "bold" }}>پروژه</TableCell>
@@ -230,17 +207,12 @@ const Dashboard = () => {
                           variant="determinate"
                           value={project.progress}
                           sx={{
-                            width: 100,
-                            height: 10,
+                            width: 80,
+                            height: 8,
                             borderRadius: 5,
                             bgcolor: "#e0e0e0",
                             "& .MuiLinearProgress-bar": {
-                              bgcolor:
-                                project.progress === 100
-                                  ? "#4caf50"
-                                  : project.progress >= 70
-                                  ? "#fcb53b"
-                                  : "#f44336",
+                              bgcolor: project.progress === 100 ? "#4caf50" : project.progress >= 70 ? "#fcb53b" : "#f44336",
                             },
                           }}
                         />
@@ -251,13 +223,7 @@ const Dashboard = () => {
                       <Chip
                         label={project.status}
                         size="small"
-                        icon={
-                          project.status === "تکمیل شده" ? (
-                            <CheckCircle fontSize="small" />
-                          ) : (
-                            <Pending fontSize="small" />
-                          )
-                        }
+                        icon={project.status === "تکمیل شده" ? <CheckCircle fontSize="small" /> : <Pending fontSize="small" />}
                         sx={{
                           bgcolor: project.status === "تکمیل شده" ? "#d4edda" : "#fff3cd",
                           color: project.status === "تکمیل شده" ? "#155724" : "#856404",
@@ -272,7 +238,7 @@ const Dashboard = () => {
           </TableContainer>
         </CardContent>
       </Card>
-    </Box>
+    </Container>
   );
 };
 
