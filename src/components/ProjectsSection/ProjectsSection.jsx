@@ -9,28 +9,28 @@ const projects = [
     img: "/Picture/beatiful buildings (3).jpg",
     title: "پارک ویو پلازا",
     desc: "پروژه‌ای مدرن با طراحی شگفت‌انگیز و چشم‌انداز شهری بی‌نظیر.",
-    route: "/ParkViewPlaza", 
+  
   },
   {
     id: 2,
     img: "/Picture/beatiful buildings (1).jpg",
     title: "اقامتگاه بایساید",
     desc: "اقامتگاهی لوکس در کنار ساحل با امکانات کامل.",
-    route: "/BaysideResidence",
+ 
   },
   {
     id: 3,
     img: "/Picture/beatiful buildings (2).jpg",
     title: "برج های جنگلی تپه",
     desc: "برج‌هایی مدرن در دل طبیعت سبز و آرامش‌بخش.",
-    route: "/HillForestTowers",
+
   },
   {
     id: 4,
     img: "/Picture/beatiful buildings (1).webp",
     title: "آسپن هایتس",
     desc: "پروژه‌ای منحصر به فرد با طراحی داخلی لوکس.",
-    route: "/AspenHeights",
+    
   },
 ];
 
