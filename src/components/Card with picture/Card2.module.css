@@ -5,7 +5,6 @@
   min-height: 100vh;
   background-color: #f3f4f6;
   font-family: yekan;
-  
 }
 
 .card {
@@ -17,7 +16,6 @@
   overflow: hidden;
   max-width: 1800px;
   width: 100%;
-  
 }
 
 @media (max-width: 900px) {
@@ -39,7 +37,6 @@
   font-weight: 700;
   color: #1e293b;
   margin-bottom: 16px;
-  
 }
 
 .description {
@@ -53,28 +50,34 @@
   display: flex;
   justify-content: flex-start;
   margin-top: 30px;
-  
 }
 
 .button {
-    width: 200px;
-    height: 70px;
-  align-self: flex-end;
-  background-color: #fcb53b;
-  color: white;
+  align-self: flex-start; /* دکمه فقط به اندازه محتوای خود عرض بگیرد مگر در موبایل */
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--secondary-color)
+  );
+  color: #fff;
   border: none;
-  padding: 12px 24px;
-  border-radius: 10px;
-  font-weight: 600;
+  border-radius: 16px;
+  padding: 1.2rem 2.5rem;
+  font-weight: 700;
+  font-size: 1.2rem;
   cursor: pointer;
-  transition: background 0.5s ease;
-  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
-  font-size: 18px;
-
+  transition: all 1s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 .button:hover {
-  background-color: #12295cff;
+  background: #12295cff;
+  /* box-shadow: 0 12px 30px #fcb53b; */
+  transform: translateY(-4px);
+}
+
+.button:active {
+  transform: translateX(0px);
+  transform: translateY(0px);
 }
 
 .imageSection {
@@ -83,7 +86,6 @@
   align-items: center;
   justify-content: center;
   flex-direction: row;
-  
 }
 
 .image {
@@ -91,5 +93,3 @@
   height: 100%;
   object-fit: cover;
 }
-
-

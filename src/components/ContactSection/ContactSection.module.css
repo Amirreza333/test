@@ -82,7 +82,7 @@
   font-weight: 700;
   font-size: 1.2rem;
   cursor: pointer;
-  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition: all 1s cubic-bezier(0.25, 0.8, 0.25, 1);
   /* box-shadow: 0 8px 20px #fcb53b; */
 }
 
